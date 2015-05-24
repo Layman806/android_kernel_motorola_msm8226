@@ -1139,6 +1139,7 @@ source "arch/arm/mach-mxs/Kconfig"
 source "arch/arm/mach-netx/Kconfig"
 
 source "arch/arm/mach-nomadik/Kconfig"
+
 source "arch/arm/plat-nomadik/Kconfig"
 
 source "arch/arm/plat-omap/Kconfig"
@@ -1150,6 +1151,7 @@ source "arch/arm/mach-omap2/Kconfig"
 source "arch/arm/mach-orion5x/Kconfig"
 
 source "arch/arm/mach-pxa/Kconfig"
+
 source "arch/arm/plat-pxa/Kconfig"
 
 source "arch/arm/mach-mmp/Kconfig"
