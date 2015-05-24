@@ -58,6 +58,18 @@ config CPU_FREQ_DEFAULT_GOV_PERFORMANCE
 	  the frequency statically to the highest frequency supported by
 	  the CPU.
 
+config CPU_FREQ_DEFAULT_ZZMOOVE
+bool "zzmoove"
+select CPU_FREQ_GOV_ZZMOOVE
+help
+Use the CPUFreq governor 'zzmoove' as default.
+
+config CPU_FREQ_DEFAULT_INTELLIDEMAND
+bool "intellidemand"
+select CPU_FREQ_GOV_INTELLIDEMAND
+help
+Use the CPUFreq governor 'intellidemand' as default.
+	  
 config CPU_FREQ_DEFAULT_GOV_POWERSAVE
 	bool "powersave"
 	depends on EXPERT
@@ -110,6 +122,18 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVE
 	  'interactive' governor for latency-sensitive workloads.
 
 endchoice
+
+config CPU_FREQ_GOV_ZZMOOVE
+tristate "'zzmoove' governor"
+depends on CPU_FREQ
+help
+A battery oriented governor. Recommended.
+
+config CPU_FREQ_GOV_INTELLIDEMAND
+tristate "'intellidemand' governor"
+depends on CPU_FREQ
+help
+An intelligent governor developed by faux123.
 
 config CPU_FREQ_GOV_PERFORMANCE
 	tristate "'performance' governor"
